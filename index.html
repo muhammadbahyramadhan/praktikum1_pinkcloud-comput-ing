@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Halaman Saya</title>
+  <style>
+    :root {
+      --bg: #fbfaf7;
+      --text: #1f2933;
+      --muted: #5f6b76;
+      --accent: #1d4e89;
+      --line: #dcd8cf;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #161a1f;
+        --text: #e8eaed;
+        --muted: #9aa5b1;
+        --accent: #7fb0e8;
+        --line: #2c333b;
+      }
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font-family: Georgia, "Times New Roman", serif;
+      line-height: 1.7;
+    }
+    a { color: var(--accent); }
+    a:focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; }
+    .wrap { max-width: 680px; margin: 0 auto; padding: 0 24px; }
+
+    header { border-bottom: 1px solid var(--line); }
+    header .wrap {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      padding-top: 20px;
+      padding-bottom: 20px;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+    .brand { font-size: 1.15rem; font-weight: bold; text-decoration: none; color: var(--text); }
+    nav a { margin-left: 20px; text-decoration: none; font-family: system-ui, sans-serif; font-size: 0.95rem; }
+    nav a:hover { text-decoration: underline; }
+
+    .hero { padding: 88px 0 64px; }
+    .hero h1 { font-size: clamp(2rem, 6vw, 3.2rem); line-height: 1.15; margin: 0 0 20px; }
+    .hero p { color: var(--muted); font-size: 1.15rem; margin: 0 0 28px; }
+    .button {
+      display: inline-block;
+      padding: 12px 22px;
+      background: var(--accent);
+      color: var(--bg);
+      text-decoration: none;
+      font-family: system-ui, sans-serif;
+      font-weight: 600;
+      border-radius: 6px;
+    }
+    .button:hover { opacity: 0.9; }
+    .button:focus-visible { outline: 3px solid var(--text); outline-offset: 3px; }
+
+    section { padding: 48px 0; border-top: 1px solid var(--line); }
+    section h2 { margin: 0 0 12px; font-size: 1.5rem; }
+    section p { margin: 0 0 12px; }
+
+    footer { padding: 32px 0; border-top: 1px solid var(--line); color: var(--muted); font-family: system-ui, sans-serif; font-size: 0.9rem; }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="wrap">
+      <a class="brand" href="#">Halaman Saya</a>
+      <nav>
+        <a href="#tentang">Tentang</a>
+        <a href="#kontak">Kontak</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="wrap">
+      <div class="hero">
+        <h1>Selamat datang di website sederhana saya.</h1>
+        <p>Ini adalah halaman statis yang dibuat dengan HTML dan CSS saja, tanpa database dan tanpa JavaScript.</p>
+        <a class="button" href="#tentang">Baca selengkapnya</a>
+      </div>
+
+      <section id="tentang">
+        <h2>Tentang</h2>
+        <p>Tulis penjelasan singkat tentang dirimu, proyekmu, atau website ini di sini. Ganti teks ini sesuai kebutuhanmu.</p>
+        <p>Kamu bisa menambah paragraf, gambar, atau bagian baru dengan menyalin struktur <code>&lt;section&gt;</code> ini.</p>
+      </section>
+
+      <section id="kontak">
+        <h2>Kontak</h2>
+        <p>Hubungi saya lewat email di <a href="mailto:nama@contoh.com">nama@contoh.com</a>.</p>
+      </section>
+    </div>
+  </main>
+
+  <footer>
+    <div class="wrap">&copy; 2026 Halaman Saya</div>
+  </footer>
+
+</body>
+</html>
